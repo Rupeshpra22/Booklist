@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    height:100vh;
+    background-image: linear-gradient(to right,#5ff43473, #ffeb3b8f)
+}
 header{
     height:10vh;
     display: flex;
@@ -72,7 +76,8 @@ input{
 
 .book-table{
     max-width: 70%;
-    margin:20px 0px
+    margin:20px 0px;
+    min-width: 50%;
 }
 
 table{
@@ -120,11 +125,6 @@ tr:nth-child(even){
     background-color: rgb(231, 128, 231);
 }
 
-table tbody{
-    height:500px;
-    overflow-y: scroll;
-}
-
 .no-data{
     display:none;
     justify-content: center;
@@ -141,5 +141,6 @@ table tbody{
 @media screen and (max-width: 760px){
     .book-table{
         max-width:90%;
+        min-width: 60%;
     }
 }
