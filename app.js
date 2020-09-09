@@ -15,7 +15,7 @@ class Book {
 class UI {
     static showInitialTableText = document.querySelector('.no-data');
     static displayBooks() {
-    
+
         //Dummy Data
         // const StoredBooks = [
         //     {
@@ -32,7 +32,7 @@ class UI {
 
         // const books = StoredBooks;
         const books = Store.getBooks();
-        if(books.length===0){
+        if (books.length === 0) {
             // const showInitialTableText = document.querySelector('.no-data');
             UI.showInitialTableText.classList.add('show');
         }
@@ -57,6 +57,7 @@ class UI {
     static deleteBook(el) {
         if (el.classList.contains('btn-trash')) {
             el.parentElement.parentElement.remove();
+            UI.showAlert('Book Removed!!!', 'info');
         }
     }
 
@@ -97,8 +98,8 @@ class Store {
 
     static addBook(book) {
         const books = Store.getBooks();
-        if(books.length>0){
-            UI.showInitialTableText.classList.remove('show');        
+        if (books.length > 0) {
+            UI.showInitialTableText.classList.remove('show');
         }
         books.push(book);
         localStorage.setItem('books', JSON.stringify(books))
@@ -106,15 +107,15 @@ class Store {
 
     static removeBook(isbn) {
         const books = Store.getBooks();
-        
+
         books.forEach((book, index) => {
             if (book.isbn === isbn) {
                 books.splice(index, 1);
             }
         });
 
-        if(books.length===0){
-            UI.showInitialTableText.classList.add('show');        
+        if (books.length === 0) {
+            UI.showInitialTableText.classList.add('show');
         }
         localStorage.setItem('books', JSON.stringify(books))
     }
@@ -131,7 +132,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
     if (title != "" && author != "" && isbn != "") {
-        UI.showInitialTableText.classList.remove('show');    
+        UI.showInitialTableText.classList.remove('show');
         //Instantiating Book
         const newBook = new Book(title, author, isbn);
         //Adding Book to UI
@@ -147,6 +148,5 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 //Event: Remove a Book
 document.querySelector('#book-list').addEventListener('click', (e) => {
     UI.deleteBook(e.target);
-    Store.removeBook(e.target.parentElement.previousElementSibling.innerText)
-    UI.showAlert('Book Removed!!!', 'info');
+    Store.removeBook(e.target.parentElement.previousElementSibling.innerText);
 })

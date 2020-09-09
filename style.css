@@ -71,7 +71,7 @@ input{
 }
 
 .book-table{
-    width: 70%;
+    max-width: 70%;
     margin:20px 0px
 }
 
@@ -136,4 +136,10 @@ table tbody{
 
 .show{
     display: flex;
+}
+
+@media screen and (max-width: 760px){
+    .book-table{
+        max-width:90%;
+    }
 }
