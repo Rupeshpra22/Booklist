@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>OOP in JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-book-open book-icon book"></i>My <span class="book">Book</span>List</div>
+    </header>
+
+    <main>
+        <form action="POST" id="book-form">
+            <div class="book-form">
+                <div class="input-fields">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="input-fields">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author">
+                </div>
+                <div class="input-fields">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" name="isbn" id="isbn">
+                </div>
+                <div class="submit-button">
+                    <input type="submit" value="Add Book" class="submit">
+                </div>
+            </div>
+        </form>
+
+        <div class="book-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+
+                </tbody>
+            </table>
+            <div class="no-data">
+                Hey! Add a book and see your book listed here
+            </div>
+        </div>
+        
+    </main>
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+header{
+    height:10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size:3rem
+}
+
+.book-icon{
+    margin-right:5px;
+}
+
+.book{
+    color:#53cbe0
+}
+
+form{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top:20px;
+}
+.book-form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.input-fields{
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border:1px solid gray;
+    border-radius:3px;
+    padding:0px 2px;
+    height: 35px;
+    margin-top:5px;
+}
+
+.submit-button{
+    display: flex;
+    justify-content: center;
+}
+
+.submit{
+    padding:10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.book-table{
+    width: 70%;
+    margin:20px 0px
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr{
+    border:1px solid gray;
+    /* background-color: blueviolet; */
+    padding:5px
+}
+
+tr, th ,td{
+    padding:10px;
+}
+
+td{
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color:rgb(241, 235, 235);
+}
+
+.btn-trash{
+    color:red;
+    cursor: pointer;
+}
+
+.alert{
+    border: 1px solid black;
+    padding: 12px 25px;
+}
+
+.success{
+    background-color: chartreuse;
+}
+
+.fail{
+    background-color: #ff0000;
+}
+
+.info{
+    background-color: rgb(231, 128, 231);
+}
+
+table tbody{
+    height:500px;
+    overflow-y: scroll;
+}
+
+.no-data{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    color: red;
+}
+
+.show{
+    display: flex;
+}
